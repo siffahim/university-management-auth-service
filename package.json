@@ -13,9 +13,9 @@
   },
   "author": "Fahim",
   "license": "ISC",
-   "lint-staged": {
+  "lint-staged": {
     "src/**/*.ts": "yarn lint-prettier"
-   },
+  },
   "devDependencies": {
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
