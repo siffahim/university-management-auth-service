@@ -1,7 +1,7 @@
-import { createLogger, format, transports } from 'winston'
-const { combine, timestamp, label, printf } = format
 import path from 'path'
+import { createLogger, format, transports } from 'winston'
 import DailyRotateFile from 'winston-daily-rotate-file'
+const { combine, timestamp, label, printf } = format
 
 const myFormat = printf(({ level, message, label, timestamp }) => {
   const date = new Date(timestamp)
@@ -33,7 +33,7 @@ const logger = createLogger({
         process.cwd(),
         'logs',
         'winston',
-        'success',
+        'successes',
         'phu-%DATE%-success.log'
       ),
       datePattern: 'YYYY-DD-MM-HH',
@@ -58,7 +58,7 @@ const errorLogger = createLogger({
         process.cwd(),
         'logs',
         'winston',
-        'success',
+        'errors',
         'phu-%DATE%-error.log'
       ),
       datePattern: 'YYYY-DD-MM-HH',
@@ -69,4 +69,4 @@ const errorLogger = createLogger({
   ],
 })
 
-export { logger, errorLogger }
+export { errorLogger, logger }
