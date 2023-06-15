@@ -2,12 +2,12 @@
 /* eslint-disable no-console */
 import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
-import config from '../../../config';
-import ApiError from '../../../errors/ApiError';
-import handleValidationError from '../../../errors/handleValidationError';
-import handleZodError from '../../../errors/handleZodError';
-import { IGenericErrorMessage } from '../../../interfaces/error';
-import { errorLogger } from '../../../shared/logger';
+import config from '../../config';
+import ApiError from '../../errors/ApiError';
+import handleValidationError from '../../errors/handleValidationError';
+import handleZodError from '../../errors/handleZodError';
+import { IGenericErrorMessage } from '../../interfaces/error';
+import { errorLogger } from '../../shared/logger';
 
 const globalErrorHandler: ErrorRequestHandler = (
   error,
