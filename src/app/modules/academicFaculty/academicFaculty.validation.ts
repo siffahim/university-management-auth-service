@@ -10,9 +10,11 @@ const createAcademicFacultyZodScheme = z.object({
 
 const updateAcademicFacultyZodScheme = z.object({
   body: z.object({
-    title: z.string({
-      required_error: 'Invalid title',
-    }),
+    title: z
+      .string({
+        required_error: 'Invalid title',
+      })
+      .optional(),
   }),
 });
 
