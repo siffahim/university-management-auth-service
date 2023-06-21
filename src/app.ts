@@ -31,6 +31,17 @@ app.use('/api/v1', routers);
 //   throw new Error('Testing Error logger')
 // })
 
+// const IdTesting = async () => {
+//   const info = {
+//     code: '01',
+//     year: '2025',
+//   };
+//   const getId = await generateFacultyId();
+
+//   console.log(getId);
+// };
+// IdTesting();
+
 //global handler
 app.use(globalErrorHandler);
 

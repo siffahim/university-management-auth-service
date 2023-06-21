@@ -1,13 +1,16 @@
 import config from '../../../config';
 import { IUser } from './user.interface';
 import { User } from './user.model';
-import { generateUserId } from './user.utils';
 
 const createUserToDB = async (user: IUser): Promise<IUser | null> => {
+  /* const info = {
+    code: '01',
+    year: '2025',
+  }; */
   //auto generated incremental Id
-  const id = await generateUserId();
+  //const id = await generateStudentId(info);
 
-  user.id = id;
+  //user.id = id;
 
   //default password
   if (!user.password) {
